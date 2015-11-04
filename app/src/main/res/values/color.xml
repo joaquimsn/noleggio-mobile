@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="principal">#ff9800</color>
+  <color name="secundaria">#1C94C4</color>
+  <color name="backgroundButton">@color/principal</color>
+  <color name="preto">#999999</color>
+</resources>
