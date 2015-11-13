@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import java.util.List;
 
@@ -39,9 +40,9 @@ public class VeiculoActivity extends Activity implements AdapterView.OnItemClick
         listView.setAdapter(listaVeiculoAdapter);
         listView.setOnItemClickListener(this);
 
-        /*ProgressBar progressBar = new ProgressBar(this);
+        ProgressBar progressBar = new ProgressBar(this);
         progressBar.setIndeterminate(true);
-        listView.setEmptyView(progressBar);*/
+        listView.setEmptyView(progressBar);
 
     }
 
@@ -54,7 +55,7 @@ public class VeiculoActivity extends Activity implements AdapterView.OnItemClick
         int idAgencia = intentExtra.getIntExtra("idAgencia", 0);
         listaVeiculo = wsClient.buscarVeiculo(idAgencia);
 
-        if (listaVeiculo == null) {
+        if (listaVeiculo == null || listaVeiculo.isEmpty()) {
             Mensagem mensagem = new Mensagem();
             mensagem.setTitulo("");
             mensagem.setDetalhe("A agência selecionada não possui veículos");

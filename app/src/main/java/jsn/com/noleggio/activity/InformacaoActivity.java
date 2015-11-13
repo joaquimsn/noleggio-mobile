@@ -10,12 +10,9 @@ import android.widget.TextView;
 
 import jsn.com.noleggio.R;
 import jsn.com.noleggio.model.Mensagem;
-import jsn.com.noleggio.util.Action;
+import jsn.com.noleggio.util.ApplicationNoleggio;
 import jsn.com.noleggio.util.Constants;
 
-/**
- * Created by Renan Baggio on 25/08/15
- */
 public class InformacaoActivity extends Activity {
 
     @Override
@@ -52,7 +49,7 @@ public class InformacaoActivity extends Activity {
 
             @Override
             protected Void doInBackground(Void... params) {
-                startActivity(new Intent(Action.AGENCIA));
+                startActivity(new Intent(ApplicationNoleggio.getAppContext(), AgenciaActivity.class));
                 return null;
             }
 
