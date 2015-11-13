@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import jsn.com.noleggio.R;
+import jsn.com.noleggio.enums.StatusVeiculoEnum;
 import jsn.com.noleggio.model.Veiculo;
 
 /**
@@ -45,23 +46,26 @@ public class ListaVeiculoAdapter extends ArrayAdapter<Veiculo> {
 
         // Recupera o Objeto para atribuir informações para tela
 
-        Veiculo Veiculo = listaVeiculo.get(position);
+        Veiculo veiculo = listaVeiculo.get(position);
 
-        if (Veiculo != null) {
+        if (veiculo != null) {
             TextView valueModelo = (TextView) convertView.findViewById(R.id.valueModelo);
             TextView valueStatus = (TextView) convertView.findViewById(R.id.valueStatus);
-            TextView valueFabricante = (TextView) convertView.findViewById(R.id.valueFabricante);
             TextView valueGrupo = (TextView) convertView.findViewById(R.id.valueGrupo);
             TextView valuePrecoKmLivre = (TextView) convertView.findViewById(R.id.valuePrecoKmLivre);
             TextView valuePrecoKmControlado = (TextView) convertView.findViewById(R.id.valuePrecoKmControlado);
 
-            valueModelo.setText(String.valueOf(Veiculo.getModelo()));
-            valueStatus.setText("Disponível");
-            valueStatus.setTextColor(Color.parseColor("#000"));
-            valueFabricante.setText(Veiculo.getFabricante());
-            valueGrupo.setText(Veiculo.getGrupo().getDisplay());
-            valuePrecoKmLivre.setText(Veiculo.getPrecoKmLivreDisplay());
-            valuePrecoKmControlado.setText(Veiculo.getPrecoKmControladoDisplay());
+            valueModelo.setText(String.valueOf(veiculo.getModelo()));
+
+            valueStatus.setText(veiculo.getStatus().getDisplay());
+            if (veiculo.getStatus() == StatusVeiculoEnum.DISPONIVEL) {
+                valueStatus.setTextColor(Color.parseColor("#12ad0f"));
+            } else {
+                valueStatus.setTextColor(Color.parseColor("#bc1414"));
+            }
+            valueGrupo.setText(veiculo.getGrupo().getDisplay());
+            valuePrecoKmLivre.setText(veiculo.getPrecoKmLivreDisplay());
+            valuePrecoKmControlado.setText(veiculo.getPrecoKmControladoDisplay());
         }
 
         return convertView;

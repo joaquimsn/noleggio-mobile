@@ -3,7 +3,7 @@ package jsn.com.noleggio.model;
 import java.io.Serializable;
 import java.text.NumberFormat;
 
-import jsn.com.noleggio.SystemUtil;
+import jsn.com.noleggio.util.SystemUtil;
 import jsn.com.noleggio.enums.GrupoVeiculoEnum;
 import jsn.com.noleggio.enums.StatusVeiculoEnum;
 
@@ -17,6 +17,7 @@ public class Veiculo implements Serializable {
     private int status;
     private double precoKmLivre;
     private double precoKmControlado;
+    private String acessorio;
 
     public int getIdVeiculo() {
         return idVeiculo;
@@ -80,6 +81,14 @@ public class Veiculo implements Serializable {
 
     public String getPrecoKmLivreDisplay() {
         return NumberFormat.getCurrencyInstance(SystemUtil.LOCALE_BRASIL).format(precoKmLivre);
+    }
+
+    public String getAcessorio() {
+        return acessorio;
+    }
+
+    public void setAcessorio(String acessorio) {
+        this.acessorio = acessorio;
     }
 
     @Override

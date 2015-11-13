@@ -14,14 +14,14 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.4"
+        android:layout_weight="0.6"
         android:orientation="vertical">
 
       <TextView
           style="@style/LabelFildStaticoRowListView"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_weight="0.4"
+          android:layout_weight="0.6"
           android:text="Modelo"/>
 
       <TextView
@@ -29,14 +29,14 @@
           style="@style/ValueDinamicoRowListViewDestaque"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_weight="0.6"/>
+          android:layout_weight="0.4"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.6"
+        android:layout_weight="0.4"
         android:orientation="vertical">>
 
       <TextView
@@ -60,39 +60,71 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="horizontal"
+      android:orientation="vertical"
       android:paddingBottom="5dp"
       android:paddingRight="5dp">
 
     <TextView
-        android:id="@+id/valueFabricante"
-        style="@style/TextViewDetalhe"
+        style="@style/LabelFildStaticoRowListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.6"
-        android:text="11/03/2015"/>
+        android:text="Grupo"/>
 
     <TextView
         android:id="@+id/valueGrupo"
-        style="@style/ValueDinamicoRowListViewDestaque"
+        style="@style/TextViewDetalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="right"
-        android:text="A - Econômico"/>
+        android:gravity="right"/>
   </LinearLayout>
 
-  <TextView
-      android:id="@+id/valuePrecoKmLivre"
-      style="@style/TextViewDetalhe"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="R$ 300,00"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
 
-  <TextView
-      android:id="@+id/valuePrecoKmControlado"
-      style="@style/TextViewDetalhe"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="R$ 265,00"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
 
+      <TextView
+          style="@style/LabelFildStaticoRowListView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.6"
+          android:text="Diária Livre"/>
+
+      <TextView
+          android:id="@+id/valuePrecoKmLivre"
+          style="@style/TextViewDetalhe"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="R$ 300,00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+
+      <TextView
+          style="@style/LabelFildStaticoRowListView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.6"
+          android:text="Diária Livre"/>
+
+      <TextView
+          android:id="@+id/valuePrecoKmControlado"
+          style="@style/TextViewDetalhe"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="R$ 265,00"/>
+
+    </LinearLayout>
+  </LinearLayout>
 </LinearLayout>

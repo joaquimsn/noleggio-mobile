@@ -9,6 +9,14 @@
               android:orientation="vertical"
               tools:context="jsn.com.noleggio.activity.AgenciaActivity">
 
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="top"
+      android:layout_marginTop="30dp"
+      android:layout_marginBottom="30dp"
+      android:src="@mipmap/logo_noleggio_dark"/>
+
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -22,7 +30,7 @@
         android:text="@string/spinner_agencia"/>
 
     <Spinner
-        android:id="@+id/AgenciaSpinner"
+        android:id="@+id/agenciaSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -32,6 +40,10 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="@string/btn_pesquisar"
+      android:textSize="25sp"
+      android:textColor="#fff"
+      android:layout_marginTop="15dp"
+      android:background="@color/secundaria"
       android:onClick="pesquisarVeiculo"/>
 
 </LinearLayout>

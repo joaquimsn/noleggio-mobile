@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                tools:context="jsn.com.noleggio.activity.DetalheVeiculoActivity">
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="10dp"
+      android:src="@mipmap/car_default"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          style="@style/LabelFildStaticoRowListView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.6"
+          android:text="Modelo"/>
+
+      <TextView
+          android:id="@+id/dtModelo"
+          style="@style/TextViewDetalhe"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+      <TextView
+          style="@style/LabelFildStaticoRowListView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.6"
+          android:text="Fabricante"/>
+
+      <TextView
+          android:id="@+id/dtFabricante"
+          style="@style/TextViewDetalhe"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+      <TextView
+          style="@style/LabelFildStaticoRowListView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.6"
+          android:text="Grupo"/>
+
+      <TextView
+          android:id="@+id/dtGrupo"
+          style="@style/TextViewDetalhe"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+      <TextView
+          style="@style/LabelFildStaticoRowListView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.6"
+          android:text="Acessórios"/>
+
+      <TextView
+          android:id="@+id/dtAcessorio"
+          style="@style/TextViewDetalhe"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Preços da Locação -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.5"
+          android:orientation="vertical">
+
+        <TextView
+            style="@style/LabelFildStaticoRowListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="Diária Livre"/>
+
+        <TextView
+            android:id="@+id/dtPrecoKmLivre"
+            style="@style/ValueDinamicoRowListViewDestaque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 300,00"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.5"
+          android:orientation="vertical">
+
+        <TextView
+            style="@style/LabelFildStaticoRowListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="Diária Livre"/>
+
+        <TextView
+            android:id="@+id/dtPrecoKmControlado"
+            style="@style/ValueDinamicoRowListViewDestaque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 265,00"/>
+
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>
